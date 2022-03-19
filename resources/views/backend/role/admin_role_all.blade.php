@@ -33,16 +33,77 @@
 						<tbody>
        @foreach ($adminuser as $item )
         <tr>
-								<td>{{asset($item->profile_photo_path)}}</i></span> </td>
+								<td> <img src="{{ asset($item->profile_photo_path) }}" style="width: 50px; height: 50px;">  </td>
 								<td>{{$item->name}}</td>
 								<td>{{$item->email}}</td>
-								<td></td>
+								<td>
+									@if ($item->brand == 1)
+										<span class="badge badge-primary">Brand</span>
+									@else
+									@endif
+									@if ($item->category == 1)
+										<span class="badge badge-secondary">Category</span>
+									@else
+									@endif
+									@if ($item->product == 1)
+										<span class="badge badge-success">Product</span>
+									@else
+									@endif
+									@if ($item->slider == 1)
+										<span class="badge badge-danger">Slider</span>
+									@else
+									@endif
+									@if ($item->coupons == 1)
+										<span class="badge badge-warning">Coupons</span>
+									@else
+									@endif
+									@if ($item->shipping == 1)
+										<span class="badge badge-info">Shipping</span>
+									@else
+									@endif
+									@if ($item->blog == 1)
+										<span class="badge badge-light">Blog</span>
+									@else
+									@endif
+									@if ($item->setting == 1)
+										<span class="badge badge-dark">Setting</span>
+									@else
+									@endif
+									@if ($item->returnorder == 1)
+										<span class="badge badge-primary">Return Order</span>
+									@else
+									@endif
+									@if ($item->review == 1)
+										<span class="badge badge-secondary">Review</span>
+									@else
+									@endif
+									@if ($item->orders == 1)
+										<span class="badge badge-success">Orders</span>
+									@else
+									@endif
+									@if ($item->stock == 1)
+										<span class="badge badge-danger">Stock</span>
+									@else
+									@endif
+									@if ($item->reports == 1)
+										<span class="badge badge-warning">Reports</span>
+									@else
+									@endif
+									@if ($item->alluser == 1)
+										<span class="badge badge-info">All User</span>
+									@else
+									@endif
+									@if ($item->adminuserrole == 1)
+										<span class="badge badge-light">Admin User Role</span>
+									@else
+									@endif
+								</td>
 								
 
 							
 								<td width="25%">
-         <a href="{{route('pending.order.details',$item->id)}}" class="btn btn-primary" title="Edit Data"><i class="fa fa-eye"></i></a>
-         <a target="_blank" href="{{route('invoice.download',$item->id)}}" class="btn btn-danger" title="Invoice Download"><i class="fa fa-download"></i></a>
+         <a href="{{route('edit.admin.user',$item->id)}}" class="btn btn-primary" title="Edit Data"><i class="fa fa-pencil"></i></a>
+         <a target="_blank" href="{{route('invoice.download',$item->id)}}" class="btn btn-danger" title="Delete" id="delete"><i class="fa fa-trash"></i></a>
         </td>
         		</tr>
        @endforeach
