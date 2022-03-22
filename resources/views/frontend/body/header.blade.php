@@ -20,6 +20,10 @@
                @if(session()->get('language') == 'swahili') Nunua @else   Checkout @endif
               </a></li>
 
+            <li><a href="" type="button"  data-toggle="modal" data-target="#orderTracking"><i class="icon fa fa-check"></i>
+               @if(session()->get('language') == 'swahili') Nunua @else   Order Tracking @endif
+              </a></li>
+
                 @auth
                 <li><a href="{{route('login')}}"><i class="icon fa fa-user"></i>
                   @if(session()->get('language') == 'swahili') Wasifu wa Mtumiaji @else   User Profile @endif
@@ -279,5 +283,37 @@
   </div>
   <!-- /.header-nav --> 
   <!-- ============================================== NAVBAR : END ============================================== --> 
-  
+
+
+  <!-- Order Tracking Modal -->
+  <div class="modal fade" id="orderTracking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Track Your Order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form  method="POST" action="{{route('order.tracking')}}">
+          @csrf
+          <div class="modal-body">
+            <label for="">Invoice Code</label>
+            <input type="text" name="code" class="form-control" required="" placeholder="Your Order Invoice Number">
+
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-left: 17px;">Track Now</button>
+       </form>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 </header>

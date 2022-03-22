@@ -14,7 +14,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Total Admin User</h3>
-      <a href="{{route('add.admin')}}" class="btn btn-danger" style="float: right;">Add Admin User</a>
+      <a href="{{route('add.admin')}}" class="btn btn-primary" style="float: right;">Add Admin User</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -103,7 +103,7 @@
 							
 								<td width="25%">
          <a href="{{route('edit.admin.user',$item->id)}}" class="btn btn-primary" title="Edit Data"><i class="fa fa-pencil"></i></a>
-         <a target="_blank" href="{{route('invoice.download',$item->id)}}" class="btn btn-danger" title="Delete" id="delete"><i class="fa fa-trash"></i></a>
+         <a target="_blank" href="{{route('delete.admin.user',$item->id)}}" class="btn btn-danger" title="Delete" id="delete"><i class="fa fa-trash"></i></a>
         </td>
         		</tr>
        @endforeach

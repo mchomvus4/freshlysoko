@@ -193,7 +193,17 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 
       //Add to Wishlist
       Route::post('/add-to-wishlist/{product_id}/',[CartController::class,'AddToWishlist']);
-     
+
+
+
+
+
+
+
+
+
+
+     ////////////////////////////////////// User Must Login////////////////////////////
       Route::group(['prefix' =>'user','middleware' =>['user','auth'],'namespace'=>'User'],function(){
            //Wishlist page
       Route::get('/wishlist',[WishlistController::class,'ViewWishlist'])->name('wishlist');
@@ -217,10 +227,22 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 
         Route::get('/return/order/list',[AllUserController::class,'ReturnOrderList'])->name('return.order.list'); 
 
-        Route::get('/cancel/order',[AllUserController::class,'CancelOrder'])->name('cancel.orders');   
+        Route::get('/cancel/order',[AllUserController::class,'CancelOrder'])->name('cancel.orders'); 
+
+
+        /////////////////////Order Tracking Routes//////////////////  
+        Route::post('/order/tracking',[AllUserController::class,'OrderTracking'])->name('order.tracking');   
 
           
       });
+
+
+
+
+
+
+
+
        //My Cart Page All Routes 
        Route::get('/mycart',[CartPageController::class,'MyCart'])->name('mycart');
 
@@ -386,5 +408,6 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
         Route::post('/store',[AdminUserController::class,'StoreAdminRole'])->name('admin.user.store');
         Route::get('/edit/{id}',[AdminUserController::class,'EditAdminRole'])->name('edit.admin.user');
         Route::post('/update',[AdminUserController::class,'UpdateAdminRole'])->name('admin.user.update');
+        Route::get('/delete/{id}',[AdminUserController::class,'DeleteAdminRole'])->name('delete.admin.user');
      
    });
