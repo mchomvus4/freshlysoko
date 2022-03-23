@@ -22,6 +22,7 @@ use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeBlogController;
+use App\Http\Controllers\Frontend\SearchController ;
 
 
 //User All Controllers
@@ -411,3 +412,6 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
         Route::get('/delete/{id}',[AdminUserController::class,'DeleteAdminRole'])->name('delete.admin.user');
      
    });
+
+   ///Product Search Routes
+        Route::post('/search',[SearchController ::class,'ProductSearch'])->name('product.search');

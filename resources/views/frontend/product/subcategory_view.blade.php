@@ -10,8 +10,16 @@ SubCategory Product
   <div class="container">
     <div class="breadcrumb-inner">
       <ul class="list-inline list-unstyled">
-        <li><a href="#">Home</a></li>
-        <li class='active'>Handbags</li>
+        <li><a href="{{url('/')}}">Home</a></li>
+
+          @foreach ($breadsubcat as $item )
+        <li class='active'>{{$item->category->category_name_en}}</li>
+         @endforeach
+
+          @foreach ($breadsubcat as $item )
+        <li class='active'>{{$item->subcategory_name_en}}</li>
+         @endforeach
+
       </ul>
     </div>
     <!-- /.breadcrumb-inner --> 
@@ -113,8 +121,8 @@ SubCategory Product
               <!-- /.sidebar-widget-body --> 
             </div>
             <!-- /.sidebar-widget --> 
-            <!-- ============================================== MANUFACTURES: END ============================================== --> 
-            <!-- ============================================== COLOR============================================== -->
+            <!-- ===================== MANUFACTURES: END =================== --> 
+            <!-- =========================== COLOR========================== -->
             <div class="sidebar-widget wow fadeInUp">
               <div class="widget-header">
                 <h4 class="widget-title">Colors</h4>
@@ -132,8 +140,8 @@ SubCategory Product
               <!-- /.sidebar-widget-body --> 
             </div>
             <!-- /.sidebar-widget --> 
-            <!-- ============================================== COLOR: END ============================================== --> 
-            <!-- ============================================== COMPARE============================================== -->
+            <!-- ======================= COLOR: END ========================== --> 
+            <!-- ============================ COMPARE=============================== -->
             <div class="sidebar-widget wow fadeInUp outer-top-vs">
               <h3 class="section-title">Compare products</h3>
               <div class="sidebar-widget-body">
@@ -188,6 +196,15 @@ SubCategory Product
             <!-- /.container-fluid --> 
           </div>
         </div>
+               @foreach ($breadsubcat as $item )
+        
+                <span class="badge badge-danger" style="background: #808080;">{{$item->category->category_name_en}}</span>
+                @endforeach
+                    /
+                  @foreach ($breadsubcat as $item )
+                  <span class="badge badge-danger" style="background: #FF0000;">{{$item->subcategory_name_en}}</span>
+                
+                @endforeach
         
      
         <div class="clearfix filters-container m-t-10">
