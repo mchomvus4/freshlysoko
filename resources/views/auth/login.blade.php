@@ -27,7 +27,7 @@
             @csrf
 		<div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">User Email <span>*</span></label>
-		    <input type="email" id="email" name="email" class="form-control unicase-form-control text-input" placeholder="Enter Your Name">
+		    <input type="email" id="email" name="email" class="form-control unicase-form-control text-input" placeholder="Enter Your Email Address">
               @error('email')
             <span class="invalid-feedback" role=	"alert">
                 <strong>{{$message}}</strong>
