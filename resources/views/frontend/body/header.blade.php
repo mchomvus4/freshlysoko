@@ -25,7 +25,7 @@
               </a></li>
 
                 @auth
-                <li><a href="{{route('login')}}"><i class="icon fa fa-user"></i>
+                <li><a href="{{url('/dashboard')}}"><i class="icon fa fa-user"></i>
                   @if(session()->get('language') == 'swahili') Wasifu wa Mtumiaji @else   User Profile @endif
                   </a></li>
 

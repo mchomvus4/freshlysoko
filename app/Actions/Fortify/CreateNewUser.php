@@ -34,5 +34,10 @@ class CreateNewUser implements CreatesNewUsers
             'phone' => $input['phone'],
             'password' => Hash::make($input['password']),
         ]);
+         $notification = array(
+                        'message' => 'Welcome Freshly Soko',
+                        'alert-type' =>'info'
+                    );
+                    return redirect()->route('dashboard')->with($notification);
     }
 }
