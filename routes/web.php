@@ -415,3 +415,5 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 
    ///Product Search Routes
         Route::post('/search',[SearchController ::class,'ProductSearch'])->name('product.search');
+        ///Advanced Search Routes
+        Route::post('/search-product',[SearchController ::class,'AdvancedProductSearch']);

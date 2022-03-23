@@ -110,9 +110,12 @@
                     </ul>
                   </li>
                 </ul>
-                <input class="search-field" name="search" placeholder="Search here..." />
-                <a class="search-button" href="#" ></a> </div>
+                <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search Product..." />
+                <button class="search-button" type="submit" ></button> </div>
             </form>
+            <div id="searchProducts">
+
+            </div>
           </div>
           <!-- /.search-area --> 
           <!-- =========================== SEARCH AREA : END ================================= --> </div>
@@ -144,7 +147,7 @@
                   <div class="pull-right"> <span class="text">Sub Total :</span>
                     <span class='price' id="cartSubTotal"></span> </div>
                   <div class="clearfix"></div>
-                  <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
+                  <a href="{{route('mycart')}}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
                 <!-- /.cart-total--> 
                 
               </li>
@@ -312,9 +315,29 @@
   </div>
 </div>
 
-
-
-
-
-
 </header>
+
+<style>
+  .search-area{
+    position: relative;
+  }
+  #searchProducts{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 999;
+    border-radius: 8px;
+    margin-top: 5px; 
+  }
+</style>
+
+<script>
+  function search_result_hide(){
+    $("#searchProducts").slideUp();
+  }
+  function search_result_show(){
+      $("#searchProducts").slideDown();
+  }
+</script>
