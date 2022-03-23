@@ -123,7 +123,7 @@ class IndexController extends Controller
     //Subcategory wise data
     public function SubCatWiseProduct($subcat_id,$slug){
          $categories = Category::orderBy('category_name_en','ASC')->get();
-         $products = Product::where('status',1)->where('subcategory_id',$subcat_id)->orderBy('id', 'DESC')->paginate(6);
+         $products = Product::where('status',1)->where('subcategory_id',$subcat_id)->orderBy('id', 'DESC')->paginate(3);
          
          $breadsubcat = SubCategory::with(['category'])->where('id',$subcat_id)->get();
 
