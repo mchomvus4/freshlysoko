@@ -23,6 +23,7 @@ use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeBlogController;
 use App\Http\Controllers\Frontend\SearchController ;
+use App\Http\Controllers\Frontend\ShopController ;
 
 
 //User All Controllers
@@ -417,3 +418,7 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
         Route::post('/search',[SearchController ::class,'ProductSearch'])->name('product.search');
         ///Advanced Search Routes
         Route::post('/search-product',[SearchController ::class,'AdvancedProductSearch']);
+
+
+     Route::get('/shop',[ShopController ::class,'ShopPage'])->name('shop.page');
+     Route::post('/shop/filter',[ShopController ::class,'ShopFilter'])->name('shop.filter');

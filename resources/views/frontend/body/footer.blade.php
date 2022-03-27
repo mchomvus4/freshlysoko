@@ -46,9 +46,7 @@
             <ul class='list-unstyled'>
               <li class="first"><a href="#" title="Contact us">My Account</a></li>
               <li><a href="#" title="About us">Order History</a></li>
-              <li><a href="#" title="faq">FAQ</a></li>
-              <li><a href="#" title="Popular Searches">Specials</a></li>
-              <li class="last"><a href="#" title="Where is my order?">Help Center</a></li>
+              
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -63,11 +61,10 @@
           
           <div class="module-body">
             <ul class='list-unstyled'>
-              <li class="first"><a title="Your Account" href="#">About us</a></li>
+              <li class="first"><a title="Your Account" href="#">About Freshly Soko</a></li>
               <li><a title="Information" href="#">Customer Service</a></li>
-              <li><a title="Addresses" href="#">Company</a></li>
-              <li><a title="Addresses" href="#">Investor Relations</a></li>
-              <li class="last"><a title="Orders History" href="#">Advanced Search</a></li>
+              
+             
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -84,9 +81,7 @@
             <ul class='list-unstyled'>
               <li class="first"><a href="#" title="About us">Shopping Guide</a></li>
               <li><a href="#" title="Blog">Blog</a></li>
-              <li><a href="#" title="Company">Company</a></li>
-              <li><a href="#" title="Investor Relations">Investor Relations</a></li>
-              <li class=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
+              
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -99,11 +94,7 @@
       <div class="col-xs-12 col-sm-6 no-padding social">
         <ul class="link">
           <li class="fb pull-left"><a target="_blank" rel="nofollow" href="{{$setting->facebook}}" title="Facebook"></a></li>
-          {{-- <li class="tw pull-left"><a target="_blank" rel="nofollow" href="{{$setting->instagram}}" title="Instagram"></a></li> --}}
-          {{-- <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li> --}}
-          {{-- <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li> --}}
-          {{-- <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li> --}}
-          {{-- <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li> --}}
+          
           <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="{{$setting->youtube}}" title="Youtube"></a></li>
         </ul>
       </div>

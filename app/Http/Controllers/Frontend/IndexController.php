@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Brand;
 use App\Models\SubCategory;
 use App\Models\SubSubCategory;
 use App\Models\Slider;
@@ -121,11 +122,30 @@ class IndexController extends Controller
     }
 
     //Subcategory wise data
-    public function SubCatWiseProduct($subcat_id,$slug){
+    public function SubCatWiseProduct(Request $request, $subcat_id,$slug){
          $categories = Category::orderBy('category_name_en','ASC')->get();
          $products = Product::where('status',1)->where('subcategory_id',$subcat_id)->orderBy('id', 'DESC')->paginate(3);
          
          $breadsubcat = SubCategory::with(['category'])->where('id',$subcat_id)->get();
+
+
+        ///LoadMore Products with ajax
+
+        if ($request->ajax()) {
+            $grid_view = view('frontend.product.grid_view_product',compact('products'))->render();
+            $list_view = view('frontend.product.list_view_product',compact('products'))->render();
+
+            return response()->json(['grid_view' =>$grid_view,'list_view' =>$list_view]);
+        }
+
+
+        ///ENDLoadMore Products with ajax
+
+
+
+
+
+
 
         // dd($products);
         return view('frontend.product.subcategory_view',compact('products','categories','breadsubcat'));

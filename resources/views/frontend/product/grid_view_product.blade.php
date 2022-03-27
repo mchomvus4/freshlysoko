@@ -6,7 +6,7 @@
                         <div class="product-image">
                           <div class="image"> <a href="{{url('product/details/'.$product->id.'/'.$product->product_slug_en)}}"><img  src="{{asset($product->product_thambnail)}}" alt=""></a> </div>
                           <!-- /.image -->
-                           @php
+                           {{-- @php
                             $markedPrice = $product->selling_price + $product->discount_price;
                             $discountPercentage = (  $product->discount_price/$markedPrice)*100;
                           @endphp
@@ -16,23 +16,22 @@
                                  @else
                                   <div class="tag hot"><span>{{round($discountPercentage )}}%</span></div>
                                   @endif
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- /.product-image -->
-                        
+                      
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">
+                          <h3 class="name"><a href="{{url('product/details/'.$product->id.'/'.$product->product_slug_en)}}">
                             @if(session()->get('language') == 'swahili')  {{$product->product_name_sw}} @else  {{$product->product_name_en}} @endif
                             </a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
+                          
 
 
-                           @if($product->discount_price == NULL)
+                           {{-- @if($product->discount_price == NULL)
                              <div class="product-price"> <span class="price">{{$product->selling_price}}Tsh. </span></div>
                            @else
                               <div class="product-price"> <span class="price">{{$product->selling_price}}Tsh.</span> <span class="price-before-discount">{{$product->discount_price}}Tsh.</span> </div>
-                           @endif
+                           @endif --}}
                          
                           <!-- /.product-price --> 
                           
@@ -46,7 +45,7 @@
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
                               <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                             
                             </ul>
                           </div>
                           <!-- /.action --> 

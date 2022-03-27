@@ -25,7 +25,7 @@ class ProductController extends Controller
 
 
             $request->validate([
-                'file' =>'required|mimes:jpeg,png,jpg,zip,pdf|max:4096',
+              'file' =>'required|mimes:jpeg,png,jpg,zip,pdf|max:4096',
             ]);
 
                 if ($files = $request->file('file')) {

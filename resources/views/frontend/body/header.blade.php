@@ -45,13 +45,7 @@
         
         <div class="cnt-block">
           <ul class="list-unstyled list-inline">
-            {{-- <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">USD</a></li>
-                <li><a href="#">INR</a></li>
-                <li><a href="#">GBP</a></li>
-              </ul>
-            </li> --}}
+         
             <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">
              @if(session()->get('language') == 'swahili') Lungha @else Language @endif
             </span><b class="caret"></b></a>
@@ -89,25 +83,19 @@
           {{-- <h1 style="color: #fff;">Freshly Soko</h1> --}}
           </a>
           <!-- /.logo --> 
-          <!-- ============================================================= LOGO : END ============================================================= --> </div>
+          <!-- ==================== LOGO : END ====================================== --> </div>
         <!-- /.logo-holder -->
         
         <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder"> 
           <!-- /.contact-row --> 
-          <!-- ============================================================= SEARCH AREA ============================================================= -->
+          <!-- ========================= SEARCH AREA ====================================== -->
           <div class="search-area">
             <form method="POST" action="{{route('product.search')}}">
               @csrf
               <div class="control-group">
                 <ul class="categories-filter animate-dropdown">
-                  <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu" >
-                      <li class="menu-header">Computer</li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
-                    </ul>
+                  <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="#">Search <b class="caret"></b></a>
+                  
                   </li>
                 </ul>
                 <input class="search-field" onfocus="search_result_show()" onblur="search_result_hide()" id="search" name="search" placeholder="Search Product..." />
@@ -130,7 +118,7 @@
               <div class="basket-item-count"><span class="count" id="cartQty"></span></div>
               <div class="total-price-basket"> <span class="lbl">cart -</span> 
                 <span class="total-price"> <span class="sign">$</span>
-                <span class="value" id="cartSubTotal">600.00</span> </span> </div>
+                <span class="value" id="cartSubTotal"></span> </span> </div>
             </div>
             </a>
             <ul class="dropdown-menu">
@@ -156,7 +144,8 @@
           </div>
           <!-- /.dropdown-cart --> 
           
-          <!-- =========================== SHOPPING CART DROPDOWN : END============================== --> </div>
+          <!-- =========================== SHOPPING CART DROPDOWN : END============================== --> 
+        </div>
         <!-- /.top-cart-row --> 
       </div>
       <!-- /.row --> 
@@ -236,38 +225,12 @@
                     </li>
                   </ul>
                 </li>
-              @endforeach<!-- End foreach bcategory loop -->
+              @endforeach<!-- End foreach category loop -->
                
-                  <ul class="dropdown-menu pages">
-                    <li>
-                      <div class="yamm-content">
-                        <div class="row">
-                          <div class="col-xs-12 col-menu">
-                            <ul class="links">
-                              <li><a href="home.html">Home</a></li>
-                              <li><a href="category.html">Category</a></li>
-                              <li><a href="detail.html">Detail</a></li>
-                              <li><a href="shopping-cart.html">Shopping Cart Summary</a></li>
-                              <li><a href="checkout.html">Checkout</a></li>
-                              <li><a href="blog.html">Blog</a></li>
-                              <li><a href="blog-details.html">Blog Detail</a></li>
-                              <li><a href="contact.html">Contact</a></li>
-                              <li><a href="sign-in.html">Sign In</a></li>
-                              <li><a href="my-wishlist.html">Wishlist</a></li>
-                              <li><a href="terms-conditions.html">Terms and Condition</a></li>
-                              <li><a href="track-orders.html">Track Orders</a></li>
-                              <li><a href="product-comparison.html">Product-Comparison</a></li>
-                              <li><a href="faq.html">FAQ</a></li>
-                              <li><a href="404.html">404</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                
                 </li>
                 {{-- <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li> --}}
-
+                <li> <a href="{{route('shop.page')}}">SHOP</a></li>
                 <li class="dropdown  navbar-right special-menu"> <a href="{{route('home.blog')}}">Blog</a> </li>
               </ul>
               <!-- /.navbar-nav -->
