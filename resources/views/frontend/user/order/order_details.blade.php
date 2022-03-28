@@ -83,10 +83,10 @@
                     <th>Invoice: </th>
                     <th class="text-danger">{{$order->invoice_no}}  </th>
                    </tr>
-                   <tr>
+                   {{-- <tr>
                     <th>Order Total: </th>
                     <th>{{$order->amount}}Tshs. </th>
-                   </tr>
+                   </tr> --}}
                    <tr>
                     <th>Order: </th>
                     <th> <span class="badge badge-pill badge-warning" style="background:#418DB9;">{{$order->status}}</span>
@@ -125,9 +125,9 @@
                    <td class="col-md-2">
                     <label for="">Quantity</label>
                    </td>
-                   <td class="col-md-2">
+                   {{-- <td class="col-md-2">
                     <label for="">Price</label>
-                   </td>
+                   </td> --}}
                    <td class="col-md-2">
                     <label for="">Download</label>
                    </td>
@@ -156,9 +156,9 @@
                    <td class="col-md-2">
                     <label for="">{{$item->qty}}</label>
                    </td>
-                   <td class="col-md-2">
+                   {{-- <td class="col-md-2">
                     <label for=""> {{$item->price * $item->qty}}Tshs.</label>
-                   </td>
+                   </td> --}}
                  
 
                    @php

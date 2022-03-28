@@ -78,7 +78,15 @@
           @php
              $setting = App\Models\ SiteSetting::find(1);
           @endphp
-          <div class="logo"> <a href="{{url('/')}}"> <img src="{{asset($setting->logo)}}" alt="logo"> </a> </div>
+          {{-- <div class="logo"> <a href="{{url('/')}}"> <img src="{{asset($setting->logo)}}" alt="logo"> </a> </div> --}}
+          <style>
+            .freshly{
+              color: #FFFFFF;
+              margin-top: 20px;
+              text-align: center;
+            }
+          </style>
+         
           <a href="{{url('/')}}">
           {{-- <h1 style="color: #fff;">Freshly Soko</h1> --}}
           </a>
@@ -104,7 +112,9 @@
             <div id="searchProducts">
 
             </div>
+          
           </div>
+            <h3 class="freshly">FRESHLY SOKO</h3>
           <!-- /.search-area --> 
           <!-- =========================== SEARCH AREA : END ================================= --> </div>
         <!-- /.top-search-holder -->
@@ -113,27 +123,27 @@
           <!-- ============================ SHOPPING CART DROPDOWN ============================== -->
           
           <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-            <div class="items-cart-inner">
+            {{-- <div class="items-cart-inner">
               <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
               <div class="basket-item-count"><span class="count" id="cartQty"></span></div>
               <div class="total-price-basket"> <span class="lbl">cart -</span> 
                 <span class="total-price"> <span class="sign">$</span>
                 <span class="value" id="cartSubTotal"></span> </span> </div>
-            </div>
+            </div> --}}
             </a>
             <ul class="dropdown-menu">
               <li>
                 <!-- ===========Min Cart Start with Ajax========== -->
-                  <div id="miniCart">
+                  {{-- <div id="miniCart">
 
-                  </div>
+                  </div> --}}
 
 
 
                   <!-- =========== END  Min Cart Start with Ajax========== -->
                 <div class="clearfix cart-total">
-                  <div class="pull-right"> <span class="text">Sub Total :</span>
-                    <span class='price' id="cartSubTotal"></span> </div>
+                  {{-- <div class="pull-right"> <span class="text">Sub Total :</span> --}}
+                    {{-- <span class='price' id="cartSubTotal"></span> </div> --}}
                   <div class="clearfix"></div>
                   <a href="{{route('mycart')}}" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
                 <!-- /.cart-total--> 
@@ -231,7 +241,7 @@
                 </li>
                 {{-- <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li> --}}
                 <li> <a href="{{route('shop.page')}}">SHOP</a></li>
-                <li class="dropdown  navbar-right special-menu"> <a href="{{route('home.blog')}}">Blog</a> </li>
+                <li class="dropdown  navbar-right special-menu"> <a href="{{route('home.blog')}}">Our Blog</a> </li>
               </ul>
               <!-- /.navbar-nav -->
               <div class="clearfix"></div>

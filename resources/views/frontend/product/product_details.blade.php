@@ -17,8 +17,8 @@
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Clothing</a></li>
-				<li class='active'>Floral Print Buttoned</li>
+				<li><a href="{{url('/shop')}}">Shop Page</a></li>
+				
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -173,12 +173,12 @@
 
 									<div class="col-sm-6">
 										<div class="price-box">
-             @if($product->discount_price == NULL)
+             {{-- @if($product->discount_price == NULL)
                <span class="price">{{$product->selling_price}}Tsh.</span>
                @else
                  <span class="price">{{$product->discount_price}}Tsh.</span>
 											     <span class="price-strike">{{$product->selling_price}}Tsh.</span>
-               @endif
+               @endif --}}
 															
 											
 										</div>

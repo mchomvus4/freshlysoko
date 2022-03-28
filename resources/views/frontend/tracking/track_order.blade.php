@@ -183,8 +183,8 @@ p {
               {{$track->payment_method}}
             </div><!-- end col-md-2-->
             <div class="col-md-2">
-             <b>Total Amount</b>
-              {{$track->amount}}Tshs.
+             <b>Your Welcome</b>
+              {{-- {{$track->amount}}Tshs. --}}
             </div><!-- end col-md-2-->
            </div><!-- end row-->
            

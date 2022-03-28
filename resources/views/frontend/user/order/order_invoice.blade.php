@@ -106,8 +106,8 @@
         <th>Color</th>
         <th>P.Code</th>
         <th>Quantity</th>
-        <th>Unit Price </th>
-        <th>Total </th>
+        {{-- <th>Unit Price </th> --}}
+        {{-- <th>Total </th> --}}
       </tr>
     </thead>
     <tbody>
@@ -137,8 +137,8 @@
          </td>
         <td align="center">{{$item->product->product_code}}</td>
         <td align="center">{{$item->qty}}</td>
-        <td align="center">{{$item->price}}Tshs</td>
-        <td align="center">{{$item->price * $item->qty}}Tshs.</td>
+        {{-- <td align="center">{{$item->price}}Tshs</td>
+        <td align="center">{{$item->price * $item->qty}}Tshs.</td> --}}
       </tr>
        @endforeach
     </tbody>
@@ -147,8 +147,8 @@
   <table width="100%" style=" padding:0 10px 0 10px;">
     <tr>
         <td align="right" >
-            <h2><span style="color: green;">Subtotal:</span> {{$order->amount}}Tshs.</h2>
-            <h2><span style="color: green;">Total:</span>  {{$order->amount}}Tshs.</h2>
+            {{-- <h2><span style="color: green;">Subtotal:</span> {{$order->amount}}Tshs.</h2>
+            <h2><span style="color: green;">Total:</span>  {{$order->amount}}Tshs.</h2> --}}
             {{-- <h2><span style="color: green;">Full Payment PAID</h2> --}}
         </td>
     </tr>

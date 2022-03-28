@@ -255,9 +255,10 @@ SubCategory Product
     </div>
     <!-- /.row --> 
     <!-- ===================== BRANDS CAROUSEL ============================= -->
-    @include('frontend.body.brand')
+    {{-- @include('frontend.body.brand') --}}
     <!-- ======================= BRANDS CAROUSEL : END ======================== -->
    </div>
+   <br><br>
   <!-- /.container --> 
   
 </div>

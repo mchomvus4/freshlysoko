@@ -516,7 +516,7 @@
                              <td class="col-md-2">
                               <div class="product-name"><a href="#">${value.name}</a></div>
                               <div class="price"> 
-                                ${value.price}
+                                
                              
                               </div>
                              </td>  
@@ -549,7 +549,7 @@
                                 
 
                                   <td class="col-md-2">
-                               <strong>${value.subtotal}Tshs.</strong>
+                               <strong>${value.qty}.</strong>
                              </td> 
                              
                             
@@ -681,7 +681,7 @@
         }
       })
     }
-
+//I have removed the ${data.total} and ${data.total} from Subtotal and Grant total
     function couponCalculation(){
       $.ajax({
         type:'GET',
@@ -690,16 +690,7 @@
         success:function(data){
           if (data.total) {
             $('#couponCalField').html(
-              `<tr>
-                                    <th>
-                                       <div class="cart-sub-total">
-                                          Subtotal<span class="inner-left-md">${data.total}Tshs.</span>
-                                       </div>
-                                       <div class="cart-grand-total">
-                                         GrantTotal<span class="inner-left-md">${data.total}Tshs.</span>
-                                       </div>
-                                    </th>
-                                 </tr>`
+              
             )
           }else{
             $('#couponCalField').html(

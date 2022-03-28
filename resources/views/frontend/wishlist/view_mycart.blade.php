@@ -29,9 +29,9 @@
                                     <th class="cart-romove item">Image</th>
                                     <th class="cart-description item">Name</th>
                                     <th class="cart-product-name item">Color</th>
-                                    <th class="cart-edit item">Size</th>
+                                    <th class="cart-edit item">Size/Weight</th>
                                     <th class="cart-qty item">Quantity</th>
-                                    <th class="cart-sub-total item">Subtotal</th>
+                                    <th class="cart-sub-total item">Total Qty</th>
                                     <th class="cart-total last-item">Remove</th>
                                    </tr>
                                   </thead><!-- /thead -->
@@ -43,40 +43,7 @@
                              </div>
                             </div>		
 
-                           <!--=======================COUPON SECTION START=============---->
-
-                              {{-- <div class="col-md-4 col-sm-12 estimate-ship-tax">
-                                  </div>
-                                  @if (Session:: has('coupon'))
-                                     
-                                  @else
-                                     
-                           
-                           <div class="col-md-4 col-sm-12 estimate-ship-tax">
-                           <table class="table" id="couponField">
-                              <thead>
-                                 <tr>
-                                    <th>
-                                       <span class="estimate-title">Discount Code</span>
-                                       <p>Enter your coupon code if you have one..</p>
-                                    </th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                    <tr>
-                                       <td>
-                                          <div class="form-group">
-                                             <input type="text" class="form-control unicase-form-control text-input" placeholder="You Coupon.." id="coupon_name">
-                                          </div>
-                                          <div class="clearfix pull-right">
-                                             <button type="submit" class="btn-upper btn btn-primary" onclick="applyCoupon()">APPLY COUPON</button>
-                                          </div>
-                                       </td>
-                                    </tr>
-                              </tbody><!-- /tbody -->
-                           </table><!-- /table -->
-                             @endif
-                        </div> --}}
+                       
 
 
 
@@ -110,7 +77,7 @@
   
                               </div>
                               <br/>
-                              @include('frontend.body.brand')
+                              {{-- @include('frontend.body.brand') --}}
                                 </div>
                              </div>
                               <!-- /.sigin-in-->

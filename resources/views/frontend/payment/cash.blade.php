@@ -2,7 +2,7 @@
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 @section('title')
-Cash on Delivery
+Bank Payment 
 @endsection
 
 
@@ -11,7 +11,7 @@ Cash on Delivery
                               <div class="breadcrumb-inner">
                                <ul class="list-inline list-unstyled">
                                 <li><a href="{{url('/')}}">Home</a></li>
-                                <li class='active'>Cash on Delivery</li>
+                                <li class='active'>Billing Account(s) Informations</li>
                                </ul>
                               </div><!-- /.breadcrumb-inner -->
                              </div><!-- /.container -->
@@ -29,14 +29,14 @@ Cash on Delivery
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-		    	<h4 class="unicase-checkout-title">Your Shopping Amount</h4>
+		    	<h4 class="unicase-checkout-title">Here Is a billing account </h4>
 		    </div>
 		    <div class="">
 				<ul class="nav nav-checkout-progress list-unstyled">
      
     
 					<li>
-      @if(Session::has('coupon'))
+      {{-- @if(Session::has('coupon'))
         <strong>SubTotal:</strong>{{$cartTotal}}Tshs.<hr/>
 
          <strong>Coupon Name:</strong>{{$session->get('coupon')['coupon_name']}}
@@ -51,7 +51,11 @@ Cash on Delivery
       @else
        <strong>SubTotal:</strong>{{$cartTotal}}Tshs.<hr/>
        <strong>Grand Total:</strong>{{$cartTotal}}Tshs.<hr/>
-      @endif
+      @endif --}}
+      <p>Freshly Soko Online</p>
+      <p>Account No: 1J30078699</p>
+      <p>CRDB BANK, AZIKIWE BRANCH,</p>
+      <p>DAR ES SALAAM, TANZANIA</p>
       
      </li>
 					
@@ -72,13 +76,14 @@ Cash on Delivery
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-		    	<h4 class="unicase-checkout-title">Select Payment Method</h4>
+		    	<h4 class="unicase-checkout-title">Note to our Customers</h4>
 		    </div>
 		 
 					<form action="{{route('cash.order')}} " method="post" id="payment-form">
                             @csrf
                         <div class="form-row">
-                         						<img src="{{asset('frontend/assets/images/payments/cash.png')}}" alt="">
+                          <p>Your Order Will Remain Pending Until we Receive Payment</p>
+                         						{{-- <img src="{{asset('frontend/assets/images/payments/cash.png')}}" alt=""> --}}
                             <label for="card-element">
                            <input type="hidden" name="name" value="{{$data['shipping_name']}}">
                            <input type="hidden" name="email" value="{{$data['shipping_email']}}">

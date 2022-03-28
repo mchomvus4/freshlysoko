@@ -748,7 +748,7 @@ Freshly Soko Online
     </div>
     <!-- /.row --> 
     <!-- ============================================== BRANDS CAROUSEL ============================================== -->
-   @include('frontend.body.brand')
+   {{-- @include('frontend.body.brand') --}}
     <!-- /.logo-slider --> 
     <!-- ============================================== BRANDS CAROUSEL : END ============================================== --> 
   </div>

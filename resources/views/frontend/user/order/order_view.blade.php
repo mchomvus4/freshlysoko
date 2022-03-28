@@ -17,12 +17,12 @@
                    <td class="col-md-1">
                     <label for="">Date</label>
                    </td>
-                   <td class="col-md-3">
+                   {{-- <td class="col-md-3">
                     <label for="">Total Amount</label>
-                   </td>
-                   <td class="col-md-3">
+                   </td> --}}
+                   {{-- <td class="col-md-3">
                     <label for="">Payment</label>
-                   </td>
+                   </td> --}}
                    <td class="col-md-2">
                     <label for="">Invoice</label>
                    </td>
@@ -43,12 +43,12 @@
                    <td class="col-md-1">
                     <label for="">{{$order->order_date}}</label>
                    </td>
-                   <td class="col-md-3">
+                   {{-- <td class="col-md-3">
                     <label for="">{{$order->amount}}Tsh</label>
-                   </td>
-                   <td class="col-md-3">
+                   </td> --}}
+                   {{-- <td class="col-md-3">
                     <label for="">{{$order->payment_method}}</label>
-                   </td>
+                   </td> --}}
                    <td class="col-md-2">
                     <label for="">{{$order->invoice_no}}</label>
                    </td>
