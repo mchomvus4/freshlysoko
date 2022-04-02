@@ -114,7 +114,9 @@
             </div>
           
           </div>
+          <a href="{{url('/')}}">
             <h3 class="freshly">FRESHLY SOKO</h3>
+            </a>
           <!-- /.search-area --> 
           <!-- =========================== SEARCH AREA : END ================================= --> </div>
         <!-- /.top-search-holder -->

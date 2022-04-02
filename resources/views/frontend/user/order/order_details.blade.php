@@ -128,9 +128,9 @@
                    {{-- <td class="col-md-2">
                     <label for="">Price</label>
                    </td> --}}
-                   <td class="col-md-2">
+                   {{-- <td class="col-md-2">
                     <label for="">Download</label>
-                   </td>
+                   </td> --}}
                    
                  </tr>
 
@@ -161,7 +161,7 @@
                    </td> --}}
                  
 
-                   @php
+                   {{-- @php
                      $file = App\Models\Product::where('id',$item->product_id)->first();
                    @endphp
 
@@ -177,7 +177,7 @@
                           </strong> 
                             </a>         
                     @endif
-                   </td>
+                   </td> --}}
                   
                  </tr>
                   @endforeach

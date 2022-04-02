@@ -123,9 +123,9 @@
             </div>
             <div class="col-md-4">
              <ul class="list-group">
-                  <li class="list-group-item">Product Price:<strong class="text-danger">Tsh<span id="pdprice"></span></strong>
+                  {{-- <li class="list-group-item">Product Price:<strong class="text-danger">Tsh<span id="pdprice"></span></strong>
                     <del id="oldprice">Tsh</del>
-                  </li>
+                  </li> --}}
                   <li class="list-group-item">Product Code:<strong id="pcode"></strong></li>
                   <li class="list-group-item">Product Category:<strong id="pcategory"></strong></li>
                   <li class="list-group-item">Farmer Brand:<strong id="pbrand"></strong></li>
@@ -183,7 +183,7 @@
             success:function(data){
               // console.log(data)
               $('#pname').text(data.product.product_name_en);
-              $('#price').text(data.product.selling_price);
+               $('#price').text(data.product.selling_price);
               $('#pcode').text(data.product.product_code);
               $('#pcategory').text(data.product.category.category_name_en);
               $('#pbrand').text(data.product.brand.brand_name_en);
