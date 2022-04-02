@@ -427,14 +427,7 @@
                              <td class="col-md-7">
                               <div class="product-name"><a href="#">${value.product.product_name_en}</a></div>
                             
-                              <div class="price">
-                              ${value.product.discount_price == null
-                              ?`${value.product.selling_price}Tshs.`
-                              :
-                              `${value.product.discount_price}Tshs.<span>${value.product.selling_price}Tshs.</span>`
-                               } 
                              
-                              </div>
                              </td>  
                              <td class="col-md-2">
                                <button  class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="${value.product_id}" onclick="productView(this.id)"> Add to Cart </button>

@@ -37,7 +37,7 @@
                             </div>			</div><!-- /.row -->
                               </div>
                               <br/>
-                              @include('frontend.body.brand')
+                              {{-- @include('frontend.body.brand') --}}
                                 </div>
                               <!-- /.sigin-in-->
 

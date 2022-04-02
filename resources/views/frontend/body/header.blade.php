@@ -6,10 +6,10 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="#"><i class="icon fa fa-user"></i>
+            {{-- <li><a href="#"><i class="icon fa fa-user"></i>
                 @if(session()->get('language') == 'swahili') Akaunti Yangu @else   My Account @endif
             
-            </a></li>
+            </a></li> --}}
             <li><a href="{{route('wishlist')}}"><i class="icon fa fa-heart"></i>
                @if(session()->get('language') == 'swahili') Orodha ya matamanio @else  Wishlist @endif
               </a></li>
