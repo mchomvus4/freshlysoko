@@ -100,14 +100,12 @@
   <table width="100%">
     <thead style="background-color: green; color:#FFFFFF;">
       <tr class="font">
-        <th>Supplier Code</th>
+        <th>Supplier P Code</th>
         <th>Product Name</th>
         <th>Weight</th>
         <th>Color</th>
-        <th>P.Code</th>
         <th>Quantity</th>
-        {{-- <th>Unit Price </th> --}}
-        {{-- <th>Total </th> --}}
+        
       </tr>
     </thead>
     <tbody>
@@ -116,10 +114,8 @@
       
     
       <tr class="font">
-        <td align="center">
-            {{-- <img src="{{public_path($item->product->product_thambnail)}}" height="60px;" width="60px;" alt=""> --}}
-        {{$item->brand_id}}
-        </td>
+      
+        <td align="center">{{$item->product->product_code}}</td>
         <td align="center">{{$item->product->product_name_en}}</td>
         <td align="center">
             @if ($item->size == NULL)
@@ -135,22 +131,16 @@
              {{$item->color}}
             @endif
          </td>
-        <td align="center">{{$item->product->product_code}}</td>
+        
         <td align="center">{{$item->qty}}</td>
-        {{-- <td align="center">{{$item->price}}Tshs</td>
-        <td align="center">{{$item->price * $item->qty}}Tshs.</td> --}}
+       
       </tr>
        @endforeach
     </tbody>
   </table>
   <br>
   <table width="100%" style=" padding:0 10px 0 10px;">
-    <tr>
-        <td align="right" >
-            {{-- <h2><span style="color: green;">Subtotal:</span> {{$order->amount}}Tshs.</h2>
-            <h2><span style="color: green;">Total:</span>  {{$order->amount}}Tshs.</h2> --}}
-            {{-- <h2><span style="color: green;">Full Payment PAID</h2> --}}
-        </td>
+   
     </tr>
   </table>
   <div class="thanks mt-3">
